@@ -10,6 +10,8 @@
     }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  </script>
 </head>
 
 <body class="flex portrait:flex-col gap-8 font-sans-serif">
@@ -32,36 +34,29 @@
       </li>
     </ul>
   </nav>
-  <main class="bg-teal-50 leading-6 flex-auto z-10">
+  <main class="max-w-full leading-6 flex-auto z-10">
     <article class="flex gap-16 flex-col py-8 max-w-prose">
       <header class="px-4">
-        <h1 id="title" class="font-serif my-8 text-4xl">Konkyline</h1>
+        <h1 id="title" class="portrait:text-center font-serif my-8 text-4xl">Konkyline</h1>
+        <h2 class="font-serif text-xl">Praktisk estetikk gjennom tekst, vekster og webdesign</h2>
       </header>
       <section class="flex flex-col gap-4 px-4">
-        <h2 class="font-serif text-3xl">Tekstkonsulent</h2>
+        <h2 class="font-serif text-xl">Tekstkonsulent</h2>
         <p>
           Tekstkonsulent for <a href="https://fluxwork.no">Fluxwork</a> som jobber for universell
           utforming gjennom små og store prosjekter innen kunst og kultur for syns- og hørselshemmede.
         </p>
-        <h3>Tar imot</h3>
-        <ul>
-          <li>
-            <h4 class="font-serif text-3xl">Tekstoppdrag</h4>
-            <p>Søknadsskriving av alle slag, hjelper gjerne med søknader til alt fra NAV til Kulturrådet og
-              offentlige såvel som private legater, fond og skoler, prosjektbeskrivelser, research, korrektur og
-              liknende.</p>
-          </li>
-          <li>
-            <h4 class="font-serif text-3xl">Floristarbeid</h4>
-            <p>
-              <a href="https://www.instagram.com/blomstersentret_homansbyen/">
-                <i class="gg-instagram"></i>
-              </a>.
-            </p>
-            <a href="javascript: document.querySelector('#gallery').scrollIntoView({behaviour: 'smooth'})">Se
-              galleri</a>
-          </li>
-        </ul>
+        
+        <h4 class="font-serif text-xl">Tekstoppdrag</h4>
+        <p>Søknadsskriving av alle slag, hjelper gjerne med søknader til alt fra NAV til Kulturrådet og
+          offentlige såvel som private legater, fond og skoler, prosjektbeskrivelser, research, korrektur og
+          liknende.</p>
+          
+        <h4 class="font-serif text-3xl">Floristarbeid</h4>
+        <p>
+          <a href="https://www.instagram.com/blomstersentret_homansbyen/">
+            <i class="gg-instagram"></i>
+          </a>
       </section>
       <section id="quotes" class="px-4">
         <h4 class="font-serif text-xl">Noen blir imponert</h4>
@@ -79,12 +74,12 @@
         </ul>
       </section>
       <section id="gallery">
-        <ul class="flex snap-x gap-8 overflow-x-scoll">
+        <ul class="flex relative gap-8 snap-x overflow-x-scoll portrait:w-full">
         </ul>
       </section>
     </article>
   </main>
-  <footer class="sticky z-0 bottom-0 right-0 landscape:h-screen self-end p-8">
+  <footer class="landscape:sticky z-0 bottom-0 right-0 landscape:h-screen self-end p-8">
     <h5>Vi tar oppdrag</h5>
     <h2>Hvordan er din bestilling?</h2>
     <form class="">
@@ -96,19 +91,19 @@
     <h4>Kontaktinformasjon</h4>
     <ul>
       <li>
-        <a ontouchstart="constructEmailForHumans" onmouseover="constructEmailForHumans" data-domain="gmail.com"
+        <a href="" ontouchstart="constructEmailForHumans(event)" onmouseover="constructEmailForHumans(event)" data-domain="gmail.com"
           data-username="alineinbu">Epost</a>
       </li>
       <li>
         <a href="tel:+4745210717">+47 45 21 07 17
         </a>
-      </li>4
+      </li>
     </ul>
   </footer>
   <script>
     const observer = new IntersectionObserver(function (entries) {
       entries.forEach(entry => {
-        if (entry.intersectionRatio <= 0) entry.target.classList.remove('opacity-0')
+        if (entry.intersectionRatio > 0) entry.target.classList.remove('opacity-0')
         else entry.target.classList.add('opactiy-0')
       })
     });
@@ -123,14 +118,15 @@
         li.setAttribute('class', 'flex h-60 opacity-0')
         img.setAttribute('class', 'transition flex-auto object-cover')
         li.style['aspect-ratio'] = '3/4'
-        galleryList.appendChild(li)
         observer.observe(li)
+        galleryList.appendChild(li)
       })
     })
-
-    function constructEmailForHumans() {
-      this.setAttribute('href', 'mailto:' + [this.dataset.username, this.dataset.domain].join('@'))
+    function constructEmailForHumans(event) {
+      const el = event.target
+      el.setAttribute('href', 'mailto:' + [el.dataset.username, el.dataset.domain].join('@'))
     }
+
   </script>
 </body>
 
