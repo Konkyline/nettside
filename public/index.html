@@ -2,6 +2,7 @@
 
 <head>
   <title>Konkyline</title>
+  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
   <style>
     @import url('https://css.gg/instagram.css');
 
@@ -74,12 +75,12 @@
         </ul>
       </section>
       <section id="gallery">
-        <ul class="flex relative gap-8 snap-x overflow-x-scoll portrait:w-full">
+        <ul class="flex gap-8 snap-x relative overflow-x-auto portrait:max-w-full h-96 justify-items-stretch">
         </ul>
       </section>
     </article>
   </main>
-  <footer class="landscape:sticky z-0 bottom-0 right-0 landscape:h-screen self-end p-8">
+  <footer class="landscape:sticky z-0 bottom-0 right-0  self-end p-8">
     <h5>Vi tar oppdrag</h5>
     <h2>Hvordan er din bestilling?</h2>
     <form class="">
@@ -109,17 +110,18 @@
     });
     const galleryList = document.querySelector('#gallery ul')
     fetch('gallerylist').then(data => data.text()).then(text => {
-      text.trim().split('\n').reverse().forEach(filename => {
+      text.trim().split('\n').forEach(filename => {
         const li = document.createElement('li')
-        const img = document.createElement('img')
+        const img = new Image
         li.appendChild(img)
-        img.setAttribute('src', 'gallery/' + filename.trim())
-        img.setAttribute('loading', 'lazy')
-        li.setAttribute('class', 'flex h-60 opacity-0')
-        img.setAttribute('class', 'transition flex-auto object-cover')
+        li.setAttribute('class', 'flex h-full opacity-0')
+        img.setAttribute('class', 'flex-auto transition object-cover')
         li.style['aspect-ratio'] = '3/4'
         observer.observe(li)
-        galleryList.appendChild(li)
+        img.addEventListener('load', () => {
+          galleryList.appendChild(li)
+        })
+        img.setAttribute('src', 'gallery/' + filename.trim())
       })
     })
     function constructEmailForHumans(event) {
