@@ -1,16 +1,23 @@
-import FlowerCount from "../islands/FlowerCount.tsx";
+import { JSX } from "preact";
 
 export default function Footer(props) {
   return (
-    <footer class="z-0 col-span-2 bottom-0 right-0 max-w-prose self-end">
-      <form name="collaborators" method="POST">
+    <footer class="z-0 md:col-span-2 col-span-3 bottom-0 right-0 max-w-prose self-end">
+      <form
+        class="mb-16"
+        action=""
+        data-action="/api/collaborator"
+        name="collaborators"
+        method="POST"
+      >
         <h5 class="font-semibold">
-          Beskriv ett oppdrag så tar vi kontakt
+          Beskriv et oppdrag så tar vi kontakt
         </h5>
-        <h2 class="font-serif text-4xl mb-8">Vi tar freelance oppdrag</h2>
+        <h2 class="font-serif text-4xl mb-8">Vi tar freelanceoppdrag</h2>
 
         <p class="mb-8">
-          Vil du bli med på vårt neste prosjekt? Her kan du formidle det du måtte ønske av alt fra tekstassistanse til dekorering av lokaler
+          Til vårt neste prosjektet kan du være vår samarbeidspartner. Om du er
+          interessert, så bare fyll ut skjemaet nedenfor.
         </p>
         <p class="mb-4">
           <label class="block font-bold mb-2">
@@ -28,7 +35,6 @@ export default function Footer(props) {
             <input
               type="email"
               name="email"
-              pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/"
               title="Please enter a valid email address"
               required
               class="border py-2 px-3 rounded-lg w-full"
@@ -37,29 +43,31 @@ export default function Footer(props) {
         </p>
         <p class="mb-4">
           <label class="block font-bold mb-2">
-            Hvilke egenskaper eller behov har du som kan bidra til prosjekter?
+            Hvilke egenskaper eller behov har du som kan bidra til prosjektet?
           </label>
           <br />
           <textarea name="skills" class="border py-2 px-3 rounded-lg w-full">
           </textarea>
         </p>
-        <p>
-          <button
-            type="submit"
-            class="bg-pink-300 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded-lg"
-          >
-            Send
-          </button>
-        </p>
+        <button
+          type="submit"
+          onfocus="this.parentNode.action=this.parentNode.dataset.action"
+          ontouchstart="this.parentNode.action=this.parentNode.dataset.action"
+          onmouseover="this.parentNode.action=this.parentNode.dataset.action"
+          class="bg-pink-300 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded-lg"
+        >
+          Send
+        </button>
       </form>
 
-      <h4>Kontaktinformasjon</h4>
+      <h4 class="text-xl font-serif">Kontaktinformasjon</h4>
       <ul>
         <li>
           <a
             href=""
-            ontouchstart="constructEmailForHumans(event)"
-            onmouseover="constructEmailForHumans(event)"
+            onfocus="this.href='mailto:'+this.dataset.username+'@'+this.dataset.domain;"
+            ontouchstart="this.href='mailto:'+this.dataset.username+'@'+this.dataset.domain;"
+            onmouseover="this.href='mailto:'+this.dataset.username+'@'+this.dataset.domain;"
             data-domain="gmail.com"
             data-username="alineinbu"
           >

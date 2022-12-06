@@ -29,7 +29,7 @@ export default function Home(_props: PageProps) {
       <body class="text-green-500 w-screen overflow-x-hidden">
         <Navigation />
         <main class="leading-6 flex-auto z-10 max-w-7xl mx-auto">
-          <article class="flex gap-8 flex-col py-8 px-4 grid">
+          <article class="flex gap-16 flex-col py-8 px-4 grid">
             <header class="col-span-3 text-center mb-8">
               <h1
                 id="title"
@@ -37,11 +37,11 @@ export default function Home(_props: PageProps) {
               >
                 Konkyline
               </h1>
-              <h2 class="font-serif text-xl underline decoration-wavy decoration-pink-300 decoration-from-font decoration-4 underline-offset-8">
-                Praktisk estetikk gjennom<br /> tekst, vekster og webdesign
+              <h2 class="font-serif text-xl underline decoration-wavy decoration-pink-300 decoration-from-font decoration-4 underline-offset-8" style="text-decoration-color: pink; text-decoration-style:wavy; text-decoration-thickness: .2rem; text-decoration-skip-ink:none; text-underline-offset: .3rem;">
+                Praktisk estetikk gjennom tekst, vekster og webdesign
               </h2>
             </header>
-            <section class="col-span-2 text-right flex flex-col gap-4 px-4 max-w-prose justify-self-end  portrait:col-span-3">
+            <section class="md:col-span-2 md:text-right col-span-3 flex flex-col gap-4 px-4 max-w-prose justify-self-end  portrait:col-span-3">
               <h2 class="font-serif text-xl">Tekstkonsulent</h2>
               <p>
                 Tekstkonsulent for{" "}
@@ -52,7 +52,7 @@ export default function Home(_props: PageProps) {
                 prosjekter innen kunst og kultur for syns- og hørselshemmede.
               </p>
             </section>
-            <section class="col-span-1 flex flex-col gap-4 px-4 max-w-prose justify-self-start portrait:col-span-3">
+            <section class="md:col-span-1 col-span-3 flex flex-col gap-4 px-4 max-w-prose justify-self-start portrait:col-span-3">
               <h4 class="font-serif text-xl">Tekstoppdrag</h4>
               <p>
                 Søknadsskriving av alle slag, hjelper gjerne med søknader til
@@ -61,20 +61,24 @@ export default function Home(_props: PageProps) {
                 korrektur og liknende.
               </p>
             </section>
-            <section class="col-span-2 flex flex-col gap-4 px-4">
-              <h4 class="font-serif text-xl">Floristarbeid</h4>
+            <section class="col-span-3 flex flex-col gap-4 px-4">
+              <h4 class="flex justify-between font-serif text-xl">
+                <span>Floristarbeid</span>
+                  <a href="https://www.instagram.com/blomstersentret_homansbyen/">
+                    <i class="gg-instagram"></i>
+                  </a>
+              </h4>
               <p>
-                <a href="https://www.instagram.com/blomstersentret_homansbyen/">
-                  <i class="gg-instagram"></i>
-                </a>
+              Lager alt fra enkle, stilrene buketter til grandiose installasjoner
+              for private og offentlige arrangementer.
               </p>
             </section>
             <section id="gallery" class="col-span-3 flex flex-col gap-4 px-4">
-              <ul class="flex gap-8 snap-x relative overflow-x-auto portrait:max-w-full h-96 justify-items-stretch">
-                {pictures}
+              <ul class="flex gap-8 snap-x relative overflow-x-auto -mx-8 portrait:max-w-full h-96 justify-items-stretch" style="scroll-snap-type: x mandatory;">
+                { pictures }
               </ul>
             </section>
-            <section class="col-span-1 text-right flex flex-col gap-4 px-4 max-w-prose justify-self-end">
+            <section class="md:col-span-1 col-span-3 md:text-right flex flex-col gap-4 max-w-prose justify-self-end">
               <h4 class="font-serif text-xl">Noen blir imponert</h4>
               <ul>
                 <li>
