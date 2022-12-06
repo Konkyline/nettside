@@ -1,11 +1,7 @@
 import { MiddlewareHandlerContext } from "$fresh/server.ts";
 import { DynamoDBClient } from "client-dynamodb";
 
-export async function handler(
-  req: Request,
-  ctx: MiddlewareHandlerContext,
-  next: Function,
-) {
+export async function handler(req: Request, ctx: MiddlewareHandlerContext, next) {
   // setup the dynamo client on ctx
   if (!ctx.dynamo) {
     ctx.dynamo = new DynamoDBClient({
