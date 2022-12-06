@@ -10,8 +10,7 @@ export default function Footer(props) {
         <h2 class="font-serif text-4xl mb-8">Vi tar freelance oppdrag</h2>
 
         <p class="mb-8">
-          Til det neste prosjektet kan du være våre samarbeidspartner. Om du er
-          interessert, så bare fyll ut skjemaet nedenfor.
+          Vil du bli med på vårt neste prosjekt? Her kan du formidle det du måtte ønske av alt fra tekstassistanse til dekorering av lokaler
         </p>
         <p class="mb-4">
           <label class="block font-bold mb-2">
