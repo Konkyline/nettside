@@ -37,7 +37,7 @@ export default function Footer(props) {
         </p>
         <p class="mb-4">
           <label class="block font-bold mb-2">
-            Hvilke egenskaper eller behov har du som kan bidra til prosjeter?
+            Hvilke egenskaper eller behov har du som kan bidra til prosjekter?
           </label>
           <br />
           <textarea name="skills" class="border py-2 px-3 rounded-lg w-full">
