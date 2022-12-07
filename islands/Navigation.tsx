@@ -1,6 +1,9 @@
 export default function Navigation(props) {
   return (
-    <nav class="landscape:sticky top-0 left-0 landscape:h-screen p-8" { ...props }>
+    <nav
+      class="landscape:sticky top-0 left-0 landscape:h-screen p-8"
+      {...props}
+    >
       <ul class="list-none flex flex-col gap-8 items-center">
         <li>
           <a
@@ -36,7 +39,8 @@ export default function Navigation(props) {
             </svg>
           </a>
         </li>
-        {/* <li>
+        {
+          /* <li>
           <a href="/gallery" class="pointer hover:text-pink-300">
             Galleri
           </a>
@@ -50,7 +54,8 @@ export default function Navigation(props) {
           <a href="/calculator" class="pointer hover:text-pink-300">
             Blomstulator
           </a>
-        </li> */}
+        </li> */
+        }
       </ul>
     </nav>
   );

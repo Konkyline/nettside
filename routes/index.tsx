@@ -9,7 +9,6 @@ import Form from "../components/Form.tsx";
 import Gallery from "../components/Gallery.tsx";
 
 export default function Home(_props: PageProps) {
-
   return (
     <>
       <Head>
@@ -29,7 +28,10 @@ export default function Home(_props: PageProps) {
               >
                 Konkyline
               </h1>
-              <h2 class="font-serif text-xl underline decoration-wavy decoration-pink-300 decoration-from-font decoration-4 underline-offset-8" style="text-decoration-color: pink; text-decoration-style:wavy; text-decoration-thickness: .2rem; text-decoration-skip-ink:none; text-underline-offset: .3rem;">
+              <h2
+                class="font-serif text-xl underline decoration-wavy decoration-pink-300 decoration-from-font decoration-4 underline-offset-8"
+                style="text-decoration-color: pink; text-decoration-style:wavy; text-decoration-thickness: .2rem; text-decoration-skip-ink:none; text-underline-offset: .3rem;"
+              >
                 Praktisk estetikk gjennom tekst, vekster og webdesign
               </h2>
             </header>
@@ -37,7 +39,11 @@ export default function Home(_props: PageProps) {
               <h2 class="font-serif text-xl">Tekstkonsulent</h2>
               <p>
                 Tekstkonsulent for{" "}
-                <a class="text-pink-300 hover:text-pink-500" href="https://fluxwork.no" rel="place of employment">
+                <a
+                  class="text-pink-300 hover:text-pink-500"
+                  href="https://fluxwork.no"
+                  rel="place of employment"
+                >
                   Fluxwork
                 </a>{" "}
                 som jobber for universell utforming gjennom små og store
@@ -56,16 +62,22 @@ export default function Home(_props: PageProps) {
             <section class="col-span-3 flex flex-col gap-4 px-4">
               <h4 class="flex justify-between items-center font-serif text-xl">
                 <span>Floristarbeid</span>
-                  <a title="Instagram konto for blomstersentret homansbyen" href="https://www.instagram.com/blomstersentret_homansbyen/">
-                    <i class="gg-instagram"></i>
-                  </a>
+                <a
+                  title="Instagram konto for blomstersentret homansbyen"
+                  href="https://www.instagram.com/blomstersentret_homansbyen/"
+                >
+                  <i class="gg-instagram"></i>
+                </a>
               </h4>
               <p>
-              Lager alt fra enkle, stilrene buketter til grandiose installasjoner
-              for private og offentlige arrangementer.
+                Lager alt fra enkle, stilrene buketter til grandiose
+                installasjoner for private og offentlige arrangementer.
               </p>
             </section>
-            <Gallery id="gallery" class="h-full col-span-3 flex flex-col gap-4 px-4"/>
+            <Gallery
+              id="gallery"
+              class="h-full col-span-3 flex flex-col gap-4 px-4"
+            />
             <aside class="md:col-span-1 col-span-3 md:text-right flex flex-col gap-4 max-w-prose justify-self-end">
               <h4 class="font-serif text-xl">Noen blir imponert</h4>
               <ul>
@@ -88,7 +100,8 @@ export default function Home(_props: PageProps) {
                 action=""
                 data-action="/api/collaborator"
                 name="collaborators"
-                method="POST" />
+                method="POST"
+              />
             </footer>
             <aside class="md:col-span-1 col-span-3 flex md:text-right flex-col gap-4 max-w-prose w-full justify-self-start">
               <h4 class="text-xl font-serif">Kontaktinformasjon</h4>
@@ -102,14 +115,14 @@ export default function Home(_props: PageProps) {
                     onmouseover="this.href='mailto:'+this.dataset.username+'@'+this.dataset.domain;"
                     data-domain="gmail.com"
                     data-username="alineinbu"
-                    class="text-pink-300 hover:text-pink-500" 
+                    class="text-pink-300 hover:text-pink-500"
                   >
                     alineinbu(ad)gmail(punkt)com
                   </a>
                 </li>
                 <li>
                   <a
-                    class="text-pink-300 hover:text-pink-500" 
+                    class="text-pink-300 hover:text-pink-500"
                     href="tel:+4745210717"
                     rel="ring meg"
                   >

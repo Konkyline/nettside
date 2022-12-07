@@ -11,7 +11,8 @@ export default function Form(props: JSX.HTMLAttributes<HTMLFormElement>) {
       </h5>
       <h2 class="font-serif text-4xl mb-8">Det neste prosjektet nærmer seg</h2>
       <p class="mb-8">
-        Det ar alltid ønskelig med nye influenser til det neste prosjektet. Om du vil være en samarbeidspartner, ta kontakt:
+        Det ar alltid ønskelig med nye influenser til det neste prosjektet. Om
+        du vil være en samarbeidspartner, ta kontakt:
       </p>
       <p class="mb-4">
         <label id="name" class="block font-bold mb-2">
@@ -71,7 +72,10 @@ export default function Form(props: JSX.HTMLAttributes<HTMLFormElement>) {
           Hvilke egenskaper og behov har du som kan bidra til prosjektet?
         </label>
         <br />
-        <textarea name="skills" class="focus:border-pink-500 border py-2 px-3 rounded-lg w-full">
+        <textarea
+          name="skills"
+          class="focus:border-pink-500 border py-2 px-3 rounded-lg w-full"
+        >
         </textarea>
       </p>
       <Button

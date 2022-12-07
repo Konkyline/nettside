@@ -9,7 +9,8 @@ export default function Contact(props: PageProps) {
         action=""
         data-action="/api/collaborator"
         name="collaborators"
-        method="POST" />
+        method="POST"
+      />
     </div>
-  )
+  );
 }
