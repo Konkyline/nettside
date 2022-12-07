@@ -1,7 +1,8 @@
 {
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.1.2/",
-    "$fs": "https://deno.land/std/fs/mod.ts",
+    "client-dynamodb": "https://esm.sh/@aws-sdk/client-dynamodb@3.225.0",
+    "client-dynamodb/": "https://esm.sh/@aws-sdk/client-dynamodb@3.225.0/",
     "preact": "https://esm.sh/preact@10.11.0",
     "preact/": "https://esm.sh/preact@10.11.0/",
     "preact-render-to-string": "https://esm.sh/*preact-render-to-string@5.2.4",

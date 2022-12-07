@@ -6,7 +6,7 @@ export default function Picture(props: JSX.HTMLAttributes<HTMLButtonElement>) {
   return (
       <img
         src={`gallery/${num}.jpg`}
-        class="object-contain" style="aspect-ratio: 1/1;"
+        class="object-contain" style="aspect-ratio: 1/1; scroll-snap-align: center;"
       />
   );
 }
