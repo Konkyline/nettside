@@ -1,23 +1,15 @@
 import { Head } from "$fresh/runtime.ts";
 import { PageProps } from "$fresh/server.ts";
-// import deno filesystem module and read a list of files in the static/gallery folder
-// import { readDir } from "$fs";
 
-// const gallery = await readDir("static/gallery");
-// import the Picture component
 import Picture from "../components/Picture.tsx";
 
 import FlowerCount from "../islands/FlowerCount.tsx";
 import Navigation from "../islands/Navigation.tsx";
-import Footer from "../components/Footer.tsx";
+import Form from "../components/Form.tsx";
+import Gallery from "../components/Gallery.tsx";
 
 export default function Home(_props: PageProps) {
 
-  const pictures = [];
-  for (let i = 1; i <= 17; i++) {
-    pictures.push((<Picture num={i} />));
-  }
-  
   return (
     <>
       <Head>
@@ -26,10 +18,10 @@ export default function Home(_props: PageProps) {
           {"@import url('https://css.gg/instagram.css');"}
         </style>
       </Head>
-      <body class="text-green-500 w-screen overflow-x-hidden">
+      <body class="text-green-600 w-screen overflow-x-hidden">
         <Navigation />
         <main class="leading-6 flex-auto z-10 max-w-7xl mx-auto">
-          <article class="flex gap-16 flex-col py-8 px-4 grid">
+          <article class="flex gap-8 flex-col py-8 px-4 grid">
             <header class="col-span-3 text-center mb-8">
               <h1
                 id="title"
@@ -41,11 +33,11 @@ export default function Home(_props: PageProps) {
                 Praktisk estetikk gjennom tekst, vekster og webdesign
               </h2>
             </header>
-            <section class="md:col-span-2 md:text-right col-span-3 flex flex-col gap-4 px-4 max-w-prose justify-self-end  portrait:col-span-3">
+            <section class="md:col-span-2 md:text-right col-span-3 flex flex-col gap-4 max-w-prose justify-self-end  portrait:col-span-3">
               <h2 class="font-serif text-xl">Tekstkonsulent</h2>
               <p>
                 Tekstkonsulent for{" "}
-                <a href="https://fluxwork.no" rel="place of employment">
+                <a class="text-pink-300 hover:text-pink-500" href="https://fluxwork.no" rel="place of employment">
                   Fluxwork
                 </a>{" "}
                 som jobber for universell utforming gjennom små og store
@@ -62,9 +54,9 @@ export default function Home(_props: PageProps) {
               </p>
             </section>
             <section class="col-span-3 flex flex-col gap-4 px-4">
-              <h4 class="flex justify-between font-serif text-xl">
+              <h4 class="flex justify-between items-center font-serif text-xl">
                 <span>Floristarbeid</span>
-                  <a href="https://www.instagram.com/blomstersentret_homansbyen/">
+                  <a title="Instagram konto for blomstersentret homansbyen" href="https://www.instagram.com/blomstersentret_homansbyen/">
                     <i class="gg-instagram"></i>
                   </a>
               </h4>
@@ -73,12 +65,8 @@ export default function Home(_props: PageProps) {
               for private og offentlige arrangementer.
               </p>
             </section>
-            <section id="gallery" class="col-span-3 flex flex-col gap-4 px-4">
-              <ul class="flex gap-8 snap-x relative overflow-x-auto -mx-8 portrait:max-w-full h-96 justify-items-stretch" style="scroll-snap-type: x mandatory;">
-                { pictures }
-              </ul>
-            </section>
-            <section class="md:col-span-1 col-span-3 md:text-right flex flex-col gap-4 max-w-prose justify-self-end">
+            <Gallery id="gallery" class="h-full col-span-3 flex flex-col gap-4 px-4"/>
+            <aside class="md:col-span-1 col-span-3 md:text-right flex flex-col gap-4 max-w-prose justify-self-end">
               <h4 class="font-serif text-xl">Noen blir imponert</h4>
               <ul>
                 <li>
@@ -93,8 +81,43 @@ export default function Home(_props: PageProps) {
                   </figcaption>
                 </li>
               </ul>
-            </section>
-            <Footer />
+            </aside>
+            <footer class="z-0 md:col-span-2 row-span-3 col-span-3 bottom-0 right-0 max-w-prose self-end">
+              <Form
+                class="mb-16"
+                action=""
+                data-action="/api/collaborator"
+                name="collaborators"
+                method="POST" />
+            </footer>
+            <aside class="md:col-span-1 col-span-3 flex md:text-right flex-col gap-4 max-w-prose w-full justify-self-start">
+              <h4 class="text-xl font-serif">Kontaktinformasjon</h4>
+              <ul>
+                <li>
+                  <a
+                    href=""
+                    rel="skriv til min epostadresse"
+                    onfocus="this.href='mailto:'+this.dataset.username+'@'+this.dataset.domain;"
+                    ontouchstart="this.href='mailto:'+this.dataset.username+'@'+this.dataset.domain;"
+                    onmouseover="this.href='mailto:'+this.dataset.username+'@'+this.dataset.domain;"
+                    data-domain="gmail.com"
+                    data-username="alineinbu"
+                    class="text-pink-300 hover:text-pink-500" 
+                  >
+                    alineinbu(ad)gmail(punkt)com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="text-pink-300 hover:text-pink-500" 
+                    href="tel:+4745210717"
+                    rel="ring meg"
+                  >
+                    +47 45 21 07 17
+                  </a>
+                </li>
+              </ul>
+            </aside>
           </article>
           <FlowerCount />
         </main>

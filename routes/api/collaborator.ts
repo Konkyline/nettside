@@ -29,27 +29,35 @@ export async function handler(
         const body = await req.formData();
         const name = body.get("name") as string;
         body.append("created_at", new Date().toISOString());
-        const { dynamo } = ctx;
-        const { Item } = await dynamo.put({
-          TableName: "collaborators",
-          Item: Object.fromEntries(body.entries()),
+        const url = `/${name}`;
+        return new Response(null, {
+          status: 303,
+          headers: {
+            Location: url,
+          },
         });
-        if (req.headers.get("accept").includes("text/html")) {
-          const url = `/${name}`;
-          return new Response(null, {
-            status: 303,
-            headers: {
-              Location: url,
-            },
-          });
-        } else {
-          return new Response(JSON.stringify(Item), {
-            status: 201,
-            headers: {
-              "content-type": "application/json",
-            },
-          });
-        }
+        // const { dynamo } = ctx;
+        // const { Item } = await dynamo.put({
+        //   TableName: "collaborators",
+        //   Item: Object.fromEntries(body.entries()),
+        // });
+        // return new Response(name, { status: 303 });
+        // if (req.headers.get("accept").includes("text/html")) {
+        //   const url = `/${name}`;
+        //   return new Response(null, {
+        //     status: 303,
+        //     headers: {
+        //       Location: url,
+        //     },
+        //   });
+        // } else {
+        //   return new Response(JSON.stringify(Item), {
+        //     status: 201,
+        //     headers: {
+        //       "content-type": "application/json",
+        //     },
+        //   });
+        // }
       } catch (e) {
         return new Response(e.message, { status: 500 });
       }

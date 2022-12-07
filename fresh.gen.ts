@@ -8,7 +8,8 @@ import * as $1 from "./routes/api/_dynamo.ts";
 import * as $2 from "./routes/api/collaborator.ts";
 import * as $3 from "./routes/calculator.tsx";
 import * as $4 from "./routes/contact.tsx";
-import * as $5 from "./routes/index.tsx";
+import * as $5 from "./routes/gallery.tsx";
+import * as $6 from "./routes/index.tsx";
 import * as $$0 from "./islands/FlowerCount.tsx";
 import * as $$1 from "./islands/Navigation.tsx";
 
@@ -19,7 +20,8 @@ const manifest = {
     "./routes/api/collaborator.ts": $2,
     "./routes/calculator.tsx": $3,
     "./routes/contact.tsx": $4,
-    "./routes/index.tsx": $5,
+    "./routes/gallery.tsx": $5,
+    "./routes/index.tsx": $6,
   },
   islands: {
     "./islands/FlowerCount.tsx": $$0,
