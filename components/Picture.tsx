@@ -6,7 +6,11 @@ export default function Picture(props: JSX.HTMLAttributes<HTMLButtonElement>) {
   return (
       <img
         src={`gallery/${num}.jpg`}
-        class="object-contain" style="aspect-ratio: 1/1; scroll-snap-align: center;"
+        alt="blomsterbilde"
+        loading="lazy"
+        onload="this.classList.remove('opacity-0')"
+        onclick="this.scrollIntoView({behavior: 'smooth'})"
+        class="transition object-contain opacity-0" style="aspect-ratio: 1/1; scroll-snap-align: center;"
       />
   );
 }

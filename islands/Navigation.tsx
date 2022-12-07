@@ -36,11 +36,21 @@ export default function Navigation(props) {
             </svg>
           </a>
         </li>
-        <li>
-          <a href="#gallery" class="pointer hover:text-pink-300">
+        {/* <li>
+          <a href="/gallery" class="pointer hover:text-pink-300">
             Galleri
           </a>
         </li>
+        <li>
+          <a href="/contact" class="pointer hover:text-pink-300">
+            Registreringsskjema
+          </a>
+        </li>
+        <li>
+          <a href="/calculator" class="pointer hover:text-pink-300">
+            Blomstulator
+          </a>
+        </li> */}
       </ul>
     </nav>
   );
