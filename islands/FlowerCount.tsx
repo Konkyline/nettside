@@ -12,8 +12,8 @@ export default function FlowerCount() {
   };
 
   return (
-    <div class="grid grid-cols-7 grid-rows-1 gap-1">
-      <div class="tracking-tight col-span-7 h-32">{flowers}</div>
+    <div class="grid grid-cols-7 grid-rows-1 gap-1 text-xl md:text-3xl">
+      <div class="tracking-tight col-span-7 h-32 text-center">{flowers}</div>
       <button value={1} onClick={handleClick}>🌷</button>
       <button value={1} onClick={handleClick}>☘️</button>
       <button value={2} onClick={handleClick}>🌺</button>
@@ -22,7 +22,7 @@ export default function FlowerCount() {
       <button value={4} onClick={handleClick}>🌼</button>
       <button value={5} onClick={handleClick}>🌻</button>
       <Button class="col-span-7">
-        Kjøp bukett for: {total.toString()} kroner
+        Buketten koster {total.toString()} kroner
       </Button>
     </div>
   );
