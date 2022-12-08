@@ -32,7 +32,8 @@ export default function Home(_props: PageProps) {
                 class="font-serif text-xl leading-loose underline decoration-wavy decoration-pink-300 decoration-from-font decoration-4 underline-offset-8"
                 style="text-decoration-color: pink; text-decoration-style:wavy; text-decoration-thickness: .2rem; text-decoration-skip-ink:none; text-underline-offset: .3rem;"
               >
-                Praktisk estetikk gjennom<br class="md:hidden"/> tekst, vekster og webdesign
+                Praktisk estetikk gjennom<br class="md:hidden" />{" "}
+                tekst, vekster og webdesign
               </h2>
             </header>
             <section class="md:col-span-2 md:text-right col-span-3 flex flex-col gap-4 max-w-prose justify-self-end  portrait:col-span-3">
