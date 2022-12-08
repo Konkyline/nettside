@@ -1,4 +1,8 @@
-# Konkylines nettside
+# [Konkylines nettside](https://konkyline.no)
+
+## Utvikling
+
+Skjer på [Github](https://github.com/konkyline/nettside).
 
 ### Start lokal utvikling
 

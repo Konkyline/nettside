@@ -4,9 +4,9 @@ import { PageProps } from "$fresh/server.ts";
 import Picture from "../components/Picture.tsx";
 
 import FlowerCount from "../islands/FlowerCount.tsx";
-import Navigation from "../islands/Navigation.tsx";
+import Navigation from "../components/Navigation.tsx";
 import Form from "../components/Form.tsx";
-import Gallery from "../components/Gallery.tsx";
+import Gallery from "../islands/Gallery.tsx";
 
 export default function Home(_props: PageProps) {
   return (
@@ -77,7 +77,7 @@ export default function Home(_props: PageProps) {
             </section>
             <Gallery
               id="gallery"
-              class="h-full col-span-3 flex flex-col gap-4 px-4"
+              class="relative h-full col-span-3 flex flex-col gap-4 px-4"
             />
             <aside class="md:col-span-1 col-span-3 md:text-right flex flex-col gap-4 max-w-prose justify-self-end">
               <h4 class="font-serif text-xl">Noen blir imponert</h4>
@@ -134,6 +134,10 @@ export default function Home(_props: PageProps) {
             </aside>
           </article>
           <FlowerCount />
+          <small class="center">
+            <script>document.write(new Date().getFullYear())</script>{" "}
+            © konkyline | kandidatnummer 2018
+          </small>
         </main>
       </body>
     </>

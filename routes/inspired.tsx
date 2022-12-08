@@ -1,27 +1,21 @@
 import { Head } from "$fresh/runtime.ts";
 export default function Inspired(props: PageProps) {
   const domains =
-    "formbergen.no doberman.no uppercase.no heydayshomerun.co bielkeyang.com manyone.com goods.no tableau-cph.com typotheque.com notedesignstudio.se barkas.com bureau.as locallll.com mososlo.com playdate-studio.com stupid-studio.com studio-atlant.dk hellome.studio"
+    "formbergen.no uppercase.no manyone.com goods.no tableau-cph.com notedesignstudio.se barkas.com bureau.as locallll.com playdate-studio.com stupid-studio.com studio-atlant.dk hellome.studio sanzero.no uniform.no bly.as forestry.no moshpit.no"
       .split(" ");
   return (
     <>
       <Head>
         <title>Inspired</title>
-        <style>
-          {`html {
-            height: 100vh;
-          }`}
-        </style>
       </Head>
-      <body
-        class="relative flex flex-wrap snap-x gap-4 z-0 justify-center align-center overflow-y-auto overflow-x-hidden"
-        style="scroll-snap-type: y mandatory;"
-      >
+      <body class="relative flex flex-wrap snap-x gap-4 z-0 justify-center align-center overflow-y-auto overflow-x-hidden">
+        <h1 class="absolute top-0 font-serif text-4xl mt-32">
+          Våre inspirasjonskilder
+        </h1>
         {domains.map((domain) => (
           <iframe
             src={`https://www.${domain}`}
             class="w-full h-screen transform scale-50"
-            style="scroll-snap-align: center;"
           />
         ))}
         <div

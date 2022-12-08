@@ -7,12 +7,12 @@ export default function Form(props: JSX.HTMLAttributes<HTMLFormElement>) {
       {...props}
     >
       <h5 class="font-semibold">
-        Beskriv ett prosjekt, så tar vi kontakt
+        Beskriv et prosjekt, så tar vi kontakt
       </h5>
       <h2 class="font-serif text-4xl mb-8">Det neste prosjektet nærmer seg</h2>
       <p class="mb-8">
-        Det ar alltid ønskelig med nye influenser til det neste prosjektet. Om
-        du vil være en samarbeidspartner, ta kontakt:
+        Det ar alltid ønskelig med ferske krav til jobben. Om du vil være en
+        inspirerene samarbeidspartner, ta kontakt:
       </p>
       <p class="mb-4">
         <label for="name" class="block font-bold mb-2">
