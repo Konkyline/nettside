@@ -4,9 +4,9 @@ import { PageProps } from "$fresh/server.ts";
 import Picture from "../components/Picture.tsx";
 
 import FlowerCount from "../islands/FlowerCount.tsx";
-import Navigation from "../islands/Navigation.tsx";
+import Navigation from "../components/Navigation.tsx";
 import Form from "../components/Form.tsx";
-import Gallery from "../components/Gallery.tsx";
+import Gallery from "../islands/Gallery.tsx";
 
 export default function Home(_props: PageProps) {
   return (
@@ -29,10 +29,11 @@ export default function Home(_props: PageProps) {
                 Konkyline
               </h1>
               <h2
-                class="font-serif text-xl underline decoration-wavy decoration-pink-300 decoration-from-font decoration-4 underline-offset-8"
+                class="font-serif text-xl leading-loose underline decoration-wavy decoration-pink-300 decoration-from-font decoration-4 underline-offset-8"
                 style="text-decoration-color: pink; text-decoration-style:wavy; text-decoration-thickness: .2rem; text-decoration-skip-ink:none; text-underline-offset: .3rem;"
               >
-                Praktisk estetikk gjennom tekst, vekster og webdesign
+                Praktisk estetikk gjennom<br class="md:hidden" />{" "}
+                tekst, vekster og webdesign
               </h2>
             </header>
             <section class="md:col-span-2 md:text-right col-span-3 flex flex-col gap-4 max-w-prose justify-self-end  portrait:col-span-3">
@@ -50,7 +51,7 @@ export default function Home(_props: PageProps) {
                 prosjekter innen kunst og kultur for syns- og hørselshemmede.
               </p>
             </section>
-            <section class="md:col-span-1 col-span-3 flex flex-col gap-4 px-4 max-w-prose justify-self-start portrait:col-span-3">
+            <section class="md:col-span-1 col-span-3 flex flex-col gap-4 max-w-prose justify-self-start portrait:col-span-3">
               <h4 class="font-serif text-xl">Tekstoppdrag</h4>
               <p>
                 Søknadsskriving av alle slag, hjelper gjerne med søknader til
@@ -59,7 +60,7 @@ export default function Home(_props: PageProps) {
                 korrektur og liknende.
               </p>
             </section>
-            <section class="col-span-3 flex flex-col gap-4 px-4">
+            <section class="col-span-3 flex flex-col gap-4">
               <h4 class="flex justify-between items-center font-serif text-xl">
                 <span>Floristarbeid</span>
                 <a
@@ -76,7 +77,7 @@ export default function Home(_props: PageProps) {
             </section>
             <Gallery
               id="gallery"
-              class="h-full col-span-3 flex flex-col gap-4 px-4"
+              class="relative h-full col-span-3 flex flex-col gap-4 px-4"
             />
             <aside class="md:col-span-1 col-span-3 md:text-right flex flex-col gap-4 max-w-prose justify-self-end">
               <h4 class="font-serif text-xl">Noen blir imponert</h4>
@@ -133,6 +134,10 @@ export default function Home(_props: PageProps) {
             </aside>
           </article>
           <FlowerCount />
+          <small class="center">
+            <script>document.write(new Date().getFullYear())</script>{" "}
+            © konkyline | kandidatnummer 2018
+          </small>
         </main>
       </body>
     </>
