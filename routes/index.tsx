@@ -6,7 +6,7 @@ import Picture from "../components/Picture.tsx";
 import FlowerCount from "../islands/FlowerCount.tsx";
 import Navigation from "../components/Navigation.tsx";
 import Form from "../components/Form.tsx";
-import Gallery from "../islands/Gallery.tsx";
+import Gallery from "../components/Gallery.tsx";
 
 export default function Home(_props: PageProps) {
   return (
@@ -96,13 +96,15 @@ export default function Home(_props: PageProps) {
               </ul>
             </aside>
             <footer class="z-0 md:col-span-2 row-span-3 col-span-3 bottom-0 right-0 max-w-prose self-end">
-              <Form
-                class="mb-16"
-                action=""
-                data-action="/api/collaborator"
-                name="collaborators"
-                method="POST"
-              />
+              <h5 class="font-semibold">
+                Beskriv et prosjekt, så tar vi kontakt
+              </h5>
+              <h2 class="font-serif text-4xl mb-8">Det neste prosjektet nærmer seg</h2>
+              <p class="mb-8">
+                Det ar alltid ønskelig med ferske krav til jobben. Om du vil være en
+                inspirerene samarbeidspartner, ta kontakt:
+              </p>
+              <Form class="mb-16 flex flex-col"/>
             </footer>
             <aside class="md:col-span-1 col-span-3 flex md:text-right flex-col gap-4 max-w-prose w-full justify-self-start">
               <h4 class="text-xl font-serif">Kontaktinformasjon</h4>
