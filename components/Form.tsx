@@ -39,7 +39,7 @@ export default function Form(props: JSX.HTMLAttributes<HTMLFormElement>) {
             id="writing"
             type="radio"
             name="type"
-            value="writing"
+            value="skriving"
             class="mr-2"
             required
           />
@@ -50,7 +50,7 @@ export default function Form(props: JSX.HTMLAttributes<HTMLFormElement>) {
             id="flowers"
             type="radio"
             name="type"
-            value="flowers"
+            value="blomster"
             class="mr-2"
             required
           />
