@@ -6,27 +6,27 @@ export default function Form(props: JSX.HTMLAttributes<HTMLFormElement>) {
     <form
       {...props}
     >
-        <label for="name" class="block font-bold mb-2">
-          Navn:
-        </label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          class="focus:border-pink-500 border py-2 px-3 mb-4 rounded-lg w-full"
-        />
-        <label for="email" class="block font-bold mb-2">
-          Epostadresse:
-        </label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          title="Please enter a valid email address"
-          placeholder="deg@internet.no"
-          required
-          class="focus:border-pink-500 border py-2 px-3 mb-4 rounded-lg w-full"
-        />
+      <label for="name" class="block font-bold mb-2">
+        Navn:
+      </label>
+      <input
+        id="name"
+        type="text"
+        name="name"
+        class="focus:border-pink-500 border py-2 px-3 mb-4 rounded-lg w-full"
+      />
+      <label for="email" class="block font-bold mb-2">
+        Epostadresse:
+      </label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        title="Please enter a valid email address"
+        placeholder="deg@internet.no"
+        required
+        class="focus:border-pink-500 border py-2 px-3 mb-4 rounded-lg w-full"
+      />
       <fieldset>
         <legend class="block font-bold mb-2">
           Hvilken type oppdrag er du interessert i?
@@ -56,16 +56,16 @@ export default function Form(props: JSX.HTMLAttributes<HTMLFormElement>) {
           />
         </div>
       </fieldset>
-        <label for="skills" class="block font-bold mb-2">
-          Hvilke egenskaper og behov har du som kan bidra til prosjektet?
-        </label>
-        <br />
-        <textarea
-          id="skills"
-          name="skills"
-          class="focus:border-pink-500 border py-2 px-3 mb-4 rounded-lg w-full"
-        >
-        </textarea>
+      <label for="skills" class="block font-bold mb-2">
+        Hvilke egenskaper og behov har du som kan bidra til prosjektet?
+      </label>
+      <br />
+      <textarea
+        id="skills"
+        name="skills"
+        class="focus:border-pink-500 border py-2 px-3 mb-4 rounded-lg w-full"
+      >
+      </textarea>
       <button
         type="submit"
         data-action="/api/collaborator"

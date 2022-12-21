@@ -6,7 +6,6 @@ export default function Gallery(props: JSX.HTMLAttributes<HTMLSectionElement>) {
   for (let i = 1; i <= 17; i++) {
     pictures.push(<Picture num={i} />);
   }
-  
 
   return (
     <section {...props}>

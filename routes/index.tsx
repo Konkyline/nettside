@@ -99,12 +99,14 @@ export default function Home(_props: PageProps) {
               <h5 class="font-semibold">
                 Beskriv et prosjekt, så tar vi kontakt
               </h5>
-              <h2 class="font-serif text-4xl mb-8">Det neste prosjektet nærmer seg</h2>
+              <h2 class="font-serif text-4xl mb-8">
+                Det neste prosjektet nærmer seg
+              </h2>
               <p class="mb-8">
-                Det ar alltid ønskelig med ferske krav til jobben. Om du vil være en
-                inspirerene samarbeidspartner, ta kontakt:
+                Det ar alltid ønskelig med ferske krav til jobben. Om du vil
+                være en inspirerene samarbeidspartner, ta kontakt:
               </p>
-              <Form class="mb-16 flex flex-col"/>
+              <Form class="mb-16 flex flex-col" />
             </footer>
             <aside class="md:col-span-1 col-span-3 flex md:text-right flex-col gap-4 max-w-prose w-full justify-self-start">
               <h4 class="text-xl font-serif">Kontaktinformasjon</h4>
