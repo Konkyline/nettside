@@ -1,8 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import { PageProps } from "$fresh/server.ts";
 
-import Picture from "../components/Picture.tsx";
-
 import FlowerCount from "../islands/FlowerCount.tsx";
 import Navigation from "../components/Navigation.tsx";
 import Form from "../components/Form.tsx";

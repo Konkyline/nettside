@@ -5,6 +5,7 @@ export default function Picture(props: JSX.HTMLAttributes<HTMLButtonElement>) {
   const num = props.num < 10 ? `0${props.num}` : props.num;
   return (
     <img
+      srcset={`gallery/${num}.avif, gallery/${num}.jpg`}
       src={`gallery/${num}.jpg`}
       alt="blomsterbilde"
       loading="lazy"
