@@ -6,38 +6,27 @@ export default function Form(props: JSX.HTMLAttributes<HTMLFormElement>) {
     <form
       {...props}
     >
-      <h5 class="font-semibold">
-        Beskriv et prosjekt, så tar vi kontakt
-      </h5>
-      <h2 class="font-serif text-4xl mb-8">Det neste prosjektet nærmer seg</h2>
-      <p class="mb-8">
-        Det ar alltid ønskelig med ferske krav til jobben. Om du vil være en
-        inspirerene samarbeidspartner, ta kontakt:
-      </p>
-      <p class="mb-4">
-        <label for="name" class="block font-bold mb-2">
-          Ditt Navn:
-        </label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          class="focus:border-pink-500 border py-2 px-3 rounded-lg w-full"
-        />
-      </p>
-      <p class="mb-4">
-        <label for="email" class="block font-bold mb-2">
-          Din Epostadresse:
-        </label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          title="Please enter a valid email address"
-          required
-          class="focus:border-pink-500 border py-2 px-3 rounded-lg w-full"
-        />
-      </p>
+      <label for="name" class="block font-bold mb-2">
+        Navn:
+      </label>
+      <input
+        id="name"
+        type="text"
+        name="name"
+        class="focus:border-pink-500 border py-2 px-3 mb-4 rounded-lg w-full"
+      />
+      <label for="email" class="block font-bold mb-2">
+        Epostadresse:
+      </label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        title="Please enter a valid email address"
+        placeholder="deg@internet.no"
+        required
+        class="focus:border-pink-500 border py-2 px-3 mb-4 rounded-lg w-full"
+      />
       <fieldset>
         <legend class="block font-bold mb-2">
           Hvilken type oppdrag er du interessert i?
@@ -50,7 +39,7 @@ export default function Form(props: JSX.HTMLAttributes<HTMLFormElement>) {
             id="writing"
             type="radio"
             name="type"
-            value="writing"
+            value="skriving"
             class="mr-2"
             required
           />
@@ -61,33 +50,33 @@ export default function Form(props: JSX.HTMLAttributes<HTMLFormElement>) {
             id="flowers"
             type="radio"
             name="type"
-            value="flowers"
+            value="blomster"
             class="mr-2"
             required
           />
         </div>
       </fieldset>
-      <p class="mb-4">
-        <label for="skills" class="block font-bold mb-2">
-          Hvilke egenskaper og behov har du som kan bidra til prosjektet?
-        </label>
-        <br />
-        <textarea
-          id="skills"
-          name="skills"
-          class="focus:border-pink-500 border py-2 px-3 rounded-lg w-full"
-        >
-        </textarea>
-      </p>
-      <Button
+      <label for="skills" class="block font-bold mb-2">
+        Hvilke egenskaper og behov har du som kan bidra til prosjektet?
+      </label>
+      <br />
+      <textarea
+        id="skills"
+        name="skills"
+        class="focus:border-pink-500 border py-2 px-3 mb-4 rounded-lg w-full"
+      >
+      </textarea>
+      <button
         type="submit"
-        onfocus="this.parentNode.action=this.parentNode.dataset.action"
-        ontouchstart="this.parentNode.action=this.parentNode.dataset.action"
-        onmouseover="this.parentNode.action=this.parentNode.dataset.action"
+        data-action="/api/collaborator"
+        formmethod="post"
+        onfocus="this.setAttribute('formactionk', this.dataset.action)"
+        ontouchstart="this.setAttribute('formaction', this.dataset.action)"
+        onmouseover="this.setAttribute('formaction', this.dataset.action)"
         class="bg-pink-300 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded-lg"
       >
         Send
-      </Button>
+      </button>
     </form>
   );
 }

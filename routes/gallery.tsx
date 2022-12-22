@@ -1,4 +1,4 @@
-import Gallery from "../islands/Gallery.tsx";
+import Gallery from "../components/Gallery.tsx";
 import { PageProps } from "$fresh/server.ts";
 import { Head } from "$fresh/runtime.ts";
 
