@@ -116,11 +116,11 @@ export default function Home(_props: PageProps) {
                     onfocus="this.href='mailto:'+this.dataset.username+'@'+this.dataset.domain;"
                     ontouchstart="this.href='mailto:'+this.dataset.username+'@'+this.dataset.domain;"
                     onmouseover="this.href='mailto:'+this.dataset.username+'@'+this.dataset.domain;"
-                    data-domain="gmail.com"
-                    data-username="alineinbu"
+                    data-domain="konkyline.no"
+                    data-username="hei"
                     class="text-pink-300 hover:text-pink-500"
                   >
-                    alineinbu(ad)gmail(punkt)com
+                    hei@konkyline.no
                   </a>
                 </li>
                 <li>
