@@ -119,8 +119,9 @@ export default function Home(_props: PageProps) {
                     data-domain="konkyline.no"
                     data-username="hei"
                     class="text-pink-300 hover:text-pink-500"
+                    style="word-spacing: -.2rem;"
                   >
-                    hei@konkyline.no
+                    hei @ konkyline.no
                   </a>
                 </li>
                 <li>

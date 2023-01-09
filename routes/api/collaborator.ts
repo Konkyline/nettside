@@ -30,7 +30,7 @@ export async function handler(
                 to: [
                   {
                     email: Deno.env.get("HOSTESS_EMAIL") ||
-                      [["alineinbu", "gmail"].join("@"), "com"].join("."),
+                      [["hei", "konkyline"].join("@"), "no"].join("."),
                   },
                 ],
               },
