@@ -139,7 +139,7 @@ export default function Home(_props: PageProps) {
           <FlowerCount />
           <small class="center">
             <script>document.write(new Date().getFullYear())</script>{" "}
-            © konkyline | kandidatnummer 2018
+            © konkyline
           </small>
         </main>
       </body>
