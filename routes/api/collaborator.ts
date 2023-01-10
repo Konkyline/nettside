@@ -22,7 +22,7 @@ export async function handler(
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${Deno.env.get("SENDGRID_API_KEY")}`
+            Authorization: `Bearer ${Deno.env.get("SENDGRID_API_KEY")}`,
           },
           body: JSON.stringify({
             personalizations: [
@@ -36,10 +36,10 @@ export async function handler(
                 ],
               },
             ],
-            reply_to: {email, name},
+            reply_to: { email, name },
             from: {
               email: [["hei", "kubikkpixel"].join("@"), "no"].join("."),
-              name: "Kubikkpixel"
+              name: "Kubikkpixel",
             },
             subject: "Ny sammarbeidsinteresse",
             content: [
