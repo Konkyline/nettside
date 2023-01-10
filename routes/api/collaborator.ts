@@ -22,7 +22,7 @@ export async function handler(
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${Deno.env.get("SENDGRID_API_KEY")}`,
+            Authorization: `Bearer ${Deno.env.get("SENDGRID_API_KEY")}`
           },
           body: JSON.stringify({
             personalizations: [
@@ -31,19 +31,22 @@ export async function handler(
                   {
                     email: Deno.env.get("HOSTESS_EMAIL") ||
                       [["hei", "konkyline"].join("@"), "no"].join("."),
+                    name: "Konkyline",
                   },
                 ],
               },
             ],
+            reply_to: {email, name},
             from: {
-              email: [["post", "kubikkpixel"].join("@"), "no"].join("."),
+              email: [["hei", "kubikkpixel"].join("@"), "no"].join("."),
+              name: "Kubikkpixel"
             },
-            subject: "Ny sammarbeidspartner",
+            subject: "Ny sammarbeidsinteresse",
             content: [
               {
                 type: "text/plain",
                 value:
-                  `Hei!\n${name} har meldt en interesse innenfor ${type} og kan bidra med ${skills}.\n Svar de da gjerne på epost: ${email}`,
+                  `Hei!\n${name} har meldt en interesse innenfor ${type} og kan bidra med ${skills}.\n Svar de da gjerne på denne eposten eller direkte til: ${email}`,
               },
             ],
           }),
@@ -54,7 +57,6 @@ export async function handler(
           throw new Error(
             "Sendgrid API error - status code: " + response.status,
           );
-          ")";
         }
         if (req.headers.get("accept")?.includes("text/html")) {
           // Redirect submitter to the a gratitude page
