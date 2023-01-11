@@ -11,6 +11,7 @@ export default function Home(_props: PageProps) {
     <>
       <Head>
         <title>Konkyline</title>
+        <link rel="icon" href="/favicon.svg" />
         <style>
           {"@import url('https://css.gg/instagram.css');"}
         </style>
