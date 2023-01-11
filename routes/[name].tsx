@@ -7,7 +7,8 @@ export default function Greet(props: PageProps) {
         Gleder oss til å bli bedre kjent <br /> med deg{" "}
         {decodeURIComponent(props.params.name)}!
       </h1>
-      <p >Du skal vel kunne høre tilbake snart…</p>
+      <p class="mb-8">Du skal vel kunne høre tilbake snart…</p>
+      <a href="/" class="text-pink-500">Tilbake</a>
     </body>
   );
 }
