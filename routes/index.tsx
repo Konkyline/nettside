@@ -15,9 +15,7 @@ export default function Home(_props: PageProps) {
         <meta name="description" content="Praktisk estetikk gjennom tekst, vekster og webdesign" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
-        <style>
-          {"@import url('https://css.gg/instagram.css');"}
-        </style>
+        <link rel="stylesheet" href="/app.css" />
       </Head>
       <body class="text-green-600 w-screen overflow-x-hidden">
         <Navigation />
