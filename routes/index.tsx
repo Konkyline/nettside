@@ -12,16 +12,19 @@ export default function Home(_props: PageProps) {
       <Head>
         <title>Konkyline</title>
         <meta name="title" content="Konkyline" />
-        <meta name="description" content="Praktisk estetikk gjennom tekst, vekster og webdesign" />
+        <meta
+          name="description"
+          content="Praktisk estetikk gjennom tekst, vekster og webdesign"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
         <link rel="stylesheet" href="/app.css" />
       </Head>
       <body class="text-green-600 w-screen overflow-x-hidden">
         <Navigation />
-        <main class="leading-6 flex-auto z-10 max-w-7xl mx-auto">
-          <article class="flex gap-8 flex-col py-8 px-4 grid">
-            <header class="col-span-3 text-center mb-8">
+        <main class="leading-6 flex-auto z-10">
+          <article class="gap-8 flex-col py-8 px-4 grid">
+            <header class="col-span-3 text-center mb-8 max-w-7xl mx-auto">
               <h1
                 id="title"
                 class="portrait:text-center font-serif my-8 text-4xl"
@@ -36,7 +39,7 @@ export default function Home(_props: PageProps) {
                 tekst, vekster og webdesign
               </h2>
             </header>
-            <section class="md:col-span-2 md:text-right col-span-3 flex flex-col gap-4 max-w-prose justify-self-end  portrait:col-span-3">
+            <section class="md:col-span-2 md:text-right col-span-3 flex flex-col gap-4 max-w-prose justify-self-end portrait:col-span-3">
               <h2 class="font-serif text-xl">Tekstkonsulent</h2>
               <p>
                 Tekstkonsulent for{" "}
