@@ -24,7 +24,7 @@ export default function Home(_props: PageProps) {
         <Navigation />
         <main class="leading-6 flex-auto z-10">
           <article class="gap-8 flex-col py-8 px-4 grid">
-            <header class="col-span-3 text-center mb-8 max-w-7xl mx-auto">
+            <header class="col-span-3 text-center mb-8">
               <h1
                 id="title"
                 class="portrait:text-center font-serif my-8 text-4xl"

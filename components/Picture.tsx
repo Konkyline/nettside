@@ -8,9 +8,8 @@ export default function Picture(props: JSX.HTMLAttributes<HTMLButtonElement>) {
       srcset={`gallery/${num}.avif, gallery/${num}.jpg`}
       src={`gallery/${num}.jpg`}
       alt="blomsterbilde"
-      loading="lazy"
       onload="this.classList.remove('opacity-0')"
-      onclick="this.scrollIntoView({behavior: 'smooth'})"
+      onclick="this.scrollIntoView({behavior: 'smooth', inline: 'center'}})"
       class="transition object-contain opacity-0"
       style="aspect-ratio: 1/1; scroll-snap-align: center;"
     />
