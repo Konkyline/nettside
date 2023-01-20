@@ -11,7 +11,7 @@ export default function Gallery(props: JSX.HTMLAttributes<HTMLSectionElement>) {
     <section {...props}>
       <button
         class="absolute top-1/2 left-0 z-10 p-4 -translate-y-1/2 hover:text-pink-300 cursor-pointer focus:outline-none"
-        onclick="this.nextElementSibling.scrollBy({left: -this.nextElementSibling.clientWidth / 2, behavior: 'smooth'}) || console.log(this.parentElement.clientWidth)"
+        onclick="this.nextElementSibling.scrollBy({left: -this.nextElementSibling.clientWidth / 2, behavior: 'smooth'})"
       >
         <svg class="h-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path
