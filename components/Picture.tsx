@@ -9,7 +9,7 @@ export default function Picture(props: JSX.HTMLAttributes<HTMLButtonElement>) {
       src={`gallery/${num}.jpg`}
       alt="blomsterbilde"
       onload="this.classList.remove('opacity-0')"
-      onclick="this.scrollIntoView({behavior: 'smooth', inline: 'center'}})"
+      onclick="this.scrollIntoView({behavior: 'smooth', inline: 'center'})"
       class="transition object-contain opacity-0"
       style="aspect-ratio: 1/1; scroll-snap-align: center;"
     />
